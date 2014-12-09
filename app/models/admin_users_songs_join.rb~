@@ -1,0 +1,2 @@
+class AdminUsersSubgenreJoin < ActiveRecord::Base
+end

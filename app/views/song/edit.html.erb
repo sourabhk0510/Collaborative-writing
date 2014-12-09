@@ -1,0 +1,17 @@
+<% @subgenre_title = "Edit Song" %>
+
+<%= link_to("<< Back to List", {:action => 'index', :subgenre_id => @subgenre.id}, :class => 'back-link') %>
+
+<div class="songs edit">
+  <h2>Update Song</h2>
+
+  <%= form_for(:song, :url => {:action => 'update', :id => @song.id, :subgenre_id => @subgenre.id}) do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Update Song") %>
+    </div>
+
+  <% end %>
+</div>

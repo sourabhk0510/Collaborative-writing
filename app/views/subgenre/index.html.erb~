@@ -1,0 +1,6 @@
+<div class = "subgenres" div>
+<h1>Subgenre</h1>
+<% @subgenres.each do |subgenre| %>
+ <li><%= link_to subgenre.name %></li> </br>
+<% end %>
+

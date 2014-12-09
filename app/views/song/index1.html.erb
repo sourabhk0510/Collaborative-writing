@@ -1,0 +1,9 @@
+<% tinymce_assets %>
+<% tinymce %>
+<h1>Song</h1>
+<% @songs.each do |f| %>
+<%= f.content %>
+<% end %>
+
+<h2> Write your Song </h2>
+<%= text_area :content, class: "tinymce" %>

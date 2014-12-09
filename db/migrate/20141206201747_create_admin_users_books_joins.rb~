@@ -1,0 +1,15 @@
+class CreateAdminUsersBooksJoins < ActiveRecord::Migration
+  def up
+    create_table :admin_users_books, id: false do |t|
+	t.integer :genre_id
+	t.integer :book_id
+      t.timestamps
+    end
+add_index :admin_users_books, [:admin_user_id, :book_id]  
+end  
+
+def
+drop_table :admin_users_books
+end
+
+end

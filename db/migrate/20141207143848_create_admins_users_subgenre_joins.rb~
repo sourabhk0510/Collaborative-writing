@@ -1,0 +1,18 @@
+class CreateAdminsUsersSubgenreJoins < ActiveRecord::Migration
+  def up
+    create_table :admins_users_subgenres do |t|
+t.integer :admin_user_id
+	t.integer :subgenre_id
+	  t.timestamps
+   end
+add_index :admin_users_subgenres, [:admin_user_id, :subgenre_id]  
+end
+
+def down
+drop_table :admin_users_subgenre_joins
+end
+
+end
+
+
+   

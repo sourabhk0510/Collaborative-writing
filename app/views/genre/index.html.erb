@@ -1,0 +1,10 @@
+<% if user_signed_in?%>
+WELCOME <%= current_user.email %></br>
+<% end %>
+<div class = "genres" div>
+<h1>Genre</h1>
+<% @genres.each do |genre| %>
+<ul>
+ <li> <%= link_to genre.title, {:controller => 'Subgenre', :genre_id => genre.id} %> </li> </br>
+</ul>
+<% end %>

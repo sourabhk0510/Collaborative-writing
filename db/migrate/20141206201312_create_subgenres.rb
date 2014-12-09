@@ -1,0 +1,15 @@
+class CreateSubgenres < ActiveRecord::Migration
+  def up
+    #create_table :subgenres do |t|
+     # t.string :name
+#	t.integer :genre_id
+
+ #     t.timestamps
+  #      end
+	add_index(:subgenres, :genre_id)  
+    end
+
+	def down
+	   drop_table :subgenres
+	end
+end

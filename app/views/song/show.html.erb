@@ -1,0 +1,23 @@
+<% @subgenre_title = "Show Song" %>
+
+<%= link_to("<< Back to List", {:action => 'index', :subgenre_id => @subgenre.id}, :class => 'back-link') %>
+
+<div class="songs show">
+  <h2>Show Song</h2>
+
+  <table summary="Song detail view">
+
+      <th>Content</th>
+      <td><%= @song.content %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @song.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @song.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

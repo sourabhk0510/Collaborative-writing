@@ -1,0 +1,20 @@
+<% @subgenre_title = "songs" %>
+
+<%= link_to("<< Back to Subgenre", {:controller => 'subgenres', :action => 'index', :subgenre_id => @subgenre.id}, :class => 'back-link') %>
+
+<div class="songs index">
+  <h2>Songs</h2>
+
+  <%= link_to("Add New Song", {:action => 'new', :subgenre_id => @subgenre.id, :subgenre_id => @subgenre.id}, :class => 'action new') %></br> </br>
+    <% @songs.each do |song| %>
+      <%= song.subgenre.name if song.subgenre %><>
+      <%= song.content %>
+      <td class="actions">
+        <%= link_to("Show", {:action => 'show', :id => song.id, :subgenre_id => @subgenre.id}, :class => 'action show') %></tr>
+
+        <%= link_to("Edit", {:action => 'edit', :id => song.id, :subgenre_id => @subgenre.id}, :class => 'action edit') %>
+       
+     
+   
+    <% end %>
+</div>
